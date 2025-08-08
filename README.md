@@ -1,27 +1,27 @@
 # sandbox
-experimental repository for testing Google Jules
+
+This repository contains a PowerShell script for creating sandbox files.
 
 ## 使い方
 
-このプログラムはC#で書かれた "Hello, World!" を表示する簡単なコンソールアプリケーションです。
+このリポジトリには、サンドボックスファイルを作成するためのPowerShellスクリプトが含まれています。
 
 ### 実行方法
 
-1. **.NET SDK のインストール**
-   - このプログラムを実行するには、.NET SDK が必要です。まだインストールしていない場合は、公式サイトからダウンロードしてインストールしてください。
-   - [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
+1.  **PowerShellを開く**
+    - WindowsでPowerShellを開きます。
+2.  **スクリプトの実行**
+    - `create_sandbox_file.ps1` があるディレクトリに移動し、以下のコマンドを実行します。
+    ```powershell
+    .\create_sandbox_file.ps1
+    ```
+    - **注意:** PowerShellの実行ポリシーによっては、スクリプトの実行がブロックされる場合があります。その場合は、まず以下のコマンドを実行して実行ポリシーを変更する必要があります。
+    ```powershell
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    ```
 
-2. **リポジトリのクローン**
-   ```bash
-   git clone <repository-url>
-   cd <repository-directory>
-   ```
+### スクリプトの動作
 
-3. **プログラムの実行**
-   - ターミナルまたはコマンドプロンプトで、以下のコマンドを実行します。
-   ```bash
-   dotnet run
-   ```
-
-4. **出力**
-   - コンソールに "Hello, World!" と表示されます。
+- このスクリプトは、`sandboxYYYYMMDD.md`という名前のファイルを作成します（`YYYYMMDD`は現在の日付です）。
+- 同じ名前のファイルが既に存在する場合、スクリプトは `sandboxYYYYMMDD-1.md`、`sandboxYYYYMMDD-2.md` のように、末尾に連番を付けて新しいファイルを作成しようとします。
+- ファイルが作成されると、スクリプトは終了する前にユーザーに入力を求めます。
