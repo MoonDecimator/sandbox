@@ -24,4 +24,5 @@ This repository contains a PowerShell script for creating sandbox files.
 
 - このスクリプトは、`sandboxYYYYMMDD.md`という名前のファイルを作成します（`YYYYMMDD`は現在の日付です）。
 - 同じ名前のファイルが既に存在する場合、スクリプトは `sandboxYYYYMMDD-1.md`、`sandboxYYYYMMDD-2.md` のように、末尾に連番を付けて新しいファイルを作成しようとします。
+- 連番は「-9」まで対応しており、それ以上のファイルは作成されません。
 - ファイルが作成されると、スクリプトは終了する前にユーザーに入力を求めます。
